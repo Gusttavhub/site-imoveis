@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine Imobiliária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Nome do Seu Irmão - Corretor</h1>
+        <p>CRECI: XXXXX | Encontre o imóvel ideal para você</p>
+        <a href="https://wa.me/55SEUNUMERO" target="_blank" class="btn-whatsapp">
+            Fale comigo no WhatsApp
+        </a>
+    </header>
+
+    <section class="filtros">
+        <select id="filtro-finalidade">
+            <option value="Todos">Comprar ou Alugar?</option>
+            <option value="Venda">Comprar</option>
+            <option value="Aluguel">Alugar</option>
+        </select>
+
+        <select id="filtro-tipo">
+            <option value="Todos">Tipo de Imóvel</option>
+            <option value="Casa">Casa</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Sobrado">Sobrado</option>
+            <option value="Terreno">Terreno</option>
+        </select>
+
+        <button onclick="filtrarImoveis()" class="btn-buscar">Buscar Imóveis</button>
+    </section>
+
+    <main style="padding-bottom: 50px;">
+        <h2 class="titulo-secao">Imóveis em Destaque</h2>
+        <div id="container-imoveis" class="container-imoveis">
+            </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
