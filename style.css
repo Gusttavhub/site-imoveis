@@ -1,39 +1,16 @@
-/* Reset básico para manter o padrão em todos os navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* --- Novos Botões e Rodapé --- */
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-body {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-/* --- Cabeçalho (Hero Section) --- */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #003366;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    color: #cbd5e1;
-}
-
-.btn-whatsapp {
+.btn-instagram {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #25D366;
+    background-color: #E1306C;
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -42,143 +19,14 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-whatsapp:hover {
-    background-color: #1ebe57;
+.btn-instagram:hover {
+    background-color: #C13584;
 }
 
-/* --- Seção de Filtros --- */
-.filtros {
-    background-color: #fff;
-    padding: 20px;
-    margin: -30px auto 30px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 10;
-}
-
-.filtros select {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    flex: 1;
-    min-width: 200px;
-}
-
-.btn-buscar {
-    padding: 12px 24px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.btn-buscar:hover {
-    background-color: #0056b3;
-}
-
-/* --- Vitrine de Imóveis (Grid) --- */
-.titulo-secao {
+.rodape {
     text-align: center;
-    margin-bottom: 30px;
-    color: #003366;
-    margin-top: 20px;
-}
-
-.container-imoveis {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- Estilo dos Cards --- */
-.card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.card-conteudo {
-    padding: 20px;
-}
-
-.tag-finalidade {
-    background-color: #007BFF;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.card-titulo {
-    margin: 15px 0 5px 0;
-    font-size: 1.3rem;
-    color: #333;
-}
-
-.card-bairro {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.card-icones {
-    display: flex;
-    gap: 15px;
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.card-preco {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #28a745;
-    margin-bottom: 15px;
-}
-
-.btn-detalhes {
-    width: 100%;
-    padding: 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.btn-detalhes:hover {
-    background-color: #555;
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    color: #ccc;
+    margin-top: 40px;
 }
