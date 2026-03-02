@@ -1,3 +1,6 @@
+// Número real do WhatsApp do Leonardo
+const numeroWhatsApp = "556484044871"; 
+
 // Nosso Banco de Dados simples
 const imoveis = [
     { 
@@ -49,6 +52,10 @@ function renderizarVitrine(listaDeImoveis = imoveis) {
     }
 
     listaDeImoveis.forEach(imovel => {
+        // Mensagem automática pronta para o cliente enviar
+        const textoMensagem = `Olá, Leonardo! Vi no seu site e tenho interesse no imóvel: ${imovel.titulo} (${imovel.tipo}) no bairro ${imovel.bairro}. Valor: ${imovel.preco}. Poderia me passar mais detalhes?`;
+        const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
+
         const cardHTML = `
             <div class="card">
                 <img src="${imovel.imagem}" alt="${imovel.titulo}">
@@ -64,7 +71,10 @@ function renderizarVitrine(listaDeImoveis = imoveis) {
                     </div>
                     
                     <p class="card-preco">${imovel.preco}</p>
-                    <button class="btn-detalhes">Ver Detalhes</button>
+                    
+                    <a href="${linkWhatsApp}" target="_blank" class="btn-detalhes" style="display: block; text-align: center; text-decoration: none;">
+                        Falar no WhatsApp
+                    </a>
                 </div>
             </div>
         `;
@@ -72,7 +82,6 @@ function renderizarVitrine(listaDeImoveis = imoveis) {
     });
 }
 
-// Função engatilhada pelo botão de busca
 function filtrarImoveis() {
     const filtroFinalidade = document.getElementById('filtro-finalidade').value;
     const filtroTipo = document.getElementById('filtro-tipo').value;
@@ -87,5 +96,4 @@ function filtrarImoveis() {
     renderizarVitrine(imoveisFiltrados);
 }
 
-// Renderiza tudo ao carregar a página
 renderizarVitrine();
